@@ -10,19 +10,23 @@ Symfonos 3 là một bài lab pentest thuộc series Symfonos, được thiết 
 
 ## Hướng dẫn sử dụng
 
-1. **Tải về máy ảo Symfonos 3**  
+1. **Tải về máy ảo Symfonos 3**
+
    Truy cập nguồn chia sẻ để tải file máy ảo.
    [Download máy ảo Symfonos 3](https://1drv.ms/u/c/7440D728936C9568/AWiVbJMo10AggHQ0GQAAAAA?e=C6HKb3)
 
 2. **Khởi động máy ảo**  
+
    Sử dụng VirtualBox hoặc VMware để chạy máy ảo.
    Thiết kế máy thực hành pentest (Linux với các công cụ chuẩn bị sẵn) cùng mạng LAN với máy ảo Symfonos 3.
 
 3. **Bắt đầu quá trình pentest**  
+
    Sử dụng các công cụ như nmap, gobuster, enum4linux, và các kỹ thuật khai thác phù hợp.
-   
-4. **Tham khảo chi tiết WRITEUP tại đây**
-[Write-up chi tiết tại đây](./WRITEUP.md)
+
+4. **Tham khảo chi tiết WRITEUP tại đây.**
+
+  [Write-up chi tiết tại đây](./WRITEUP.md)
 
 ## Đóng góp
 
