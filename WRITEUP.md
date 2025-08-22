@@ -15,6 +15,7 @@ Use **nmap** to scan all ports and detect services:
 
 ```bash
 nmap -p- -sC -sV <target-ip>
+```
 
 
   ![SCAN PORT](image.png)
