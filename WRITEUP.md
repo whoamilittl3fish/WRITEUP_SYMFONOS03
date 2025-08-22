@@ -44,7 +44,8 @@ From the **nmap** scan, we discovered the following open services:
 ### Web Enumeration
 Using tools such as **Nikto**, **Gobuster**, and **Dirb**, we discovered the following directories on the web server:
 
-<img width="624" height="277" alt="image" src="https://github.com/user-attachments/assets/1a5efd6f-a22f-407d-8ef4-2fd2fc58d94d" />
+<img width="887" height="690" alt="image" src="https://github.com/user-attachments/assets/26093403-721a-42a3-a049-b77507e10fb0" />
+
 
 - `/index.html` → Default index page
 - `/server-status` → Apache server status page (restricted)  
