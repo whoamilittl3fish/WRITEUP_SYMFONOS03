@@ -14,11 +14,16 @@ This simulates the victim machine’s IP address in a real-world scenario.
 Use **nmap** to scan all ports and detect services:  
 
 ```bash
-nmap -sS -sV -A -O -p<target-ip>
+nmap -sS -A -O -p- <target-ip>
 ```
+With this, we can stealth scan SYN, collect information such as service + version, scan all port.
 Options:
-  -sS: 
-
+  -  sS: half-open scan with SYN (SERVER) -> SYN-ACK (CLIENT) -> RST (SERVER)
+  -  -A: -sV, -O, --script=default, --traceroute
+  -  sV: output information of service, version
+  -   O: OS dection
+  - -p-: scan all port (65535 ports)
+  -  
   ![SCAN PORT](image.png)
 
 
