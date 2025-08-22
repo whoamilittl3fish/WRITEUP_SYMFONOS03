@@ -67,8 +67,14 @@ Next step: Perform a directory scan specifically on `/cgi-bin/` to identify any 
 
 Example scan:
 ```bash
-gobuster dir -u http://192.168.189.139/cgi-bin/ -w /usr/share/wordlists/dirbuster/directory-lists-2.3-medium.txt
+gobuster dir -u http://192.168.189.139/cgi-bin/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
-<img width="624" height="154" alt="image" src="https://github.com/user-attachments/assets/691dce90-34fa-4b1a-8b4a-ef59a8d92e01" />
-<img width="625" height="186" alt="image" src="https://github.com/user-attachments/assets/fc74caac-fdbb-4c5f-aa6a-f9d438e6e387" />
+<img width="1384" height="511" alt="image" src="https://github.com/user-attachments/assets/4958844b-2bed-4f12-b832-4b4034ee62fa" />
+
+The scan revealed the endpoint:
+`/cgi-bin/underworld`
+When accessed in the browser, it displays information such as system time and logged-in users:
+
+<img width="1281" height="241" alt="image" src="https://github.com/user-attachments/assets/a903e9ba-7239-460b-8773-7153e467a67b" />
+
 
