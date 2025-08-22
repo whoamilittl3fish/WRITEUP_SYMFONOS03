@@ -1,41 +1,41 @@
 # Symfonos 3 Lab
 
-Symfonos 3 là một bài lab pentest thuộc series Symfonos, được thiết kế nhằm giúp người học thực hành các kỹ năng kiểm thử xâm nhập (penetration testing) trên môi trường máy chủ Linux. Bài lab này mô phỏng các tình huống thực tế, giúp bạn rèn luyện các kỹ năng như thu thập thông tin, khai thác lỗ hổng, leo thang đặc quyền và chiếm quyền kiểm soát hệ thống.
+Symfonos 3 is a penetration testing lab that belongs to the Symfonos series. It is designed to help learners practice penetration testing skills on a Linux server environment. This lab simulates real-world scenarios, allowing you to strengthen your abilities in information gathering, vulnerability exploitation, privilege escalation, and gaining full system control.  
 
-## Mục tiêu
+## Objectives
 
-- Hiểu và thực hành các bước trong quy trình pentest.
-- Áp dụng các kỹ thuật khai thác lỗ hổng trên hệ thống Linux.
-- Nâng cao kỹ năng leo thang đặc quyền và chiếm quyền root.
+- Understand and practice the steps of a penetration test.  
+- Apply vulnerability exploitation techniques on a Linux system.  
+- Improve skills in privilege escalation and obtaining root access.  
 
-## Hướng dẫn sử dụng
+## Usage Guide
 
-1. **Tải về máy ảo Symfonos 3**
+1. **Download the Symfonos 3 Virtual Machine**  
 
-   Truy cập nguồn chia sẻ để tải file máy ảo.
-   [Download máy ảo Symfonos 3](https://1drv.ms/u/c/7440D728936C9568/AWiVbJMo10AggHQ0GQAAAAA?e=C6HKb3)
+   Access the shared source to download the VM file.  
+   [Download Symfonos 3 VM](https://1drv.ms/u/c/7440D728936C9568/AWiVbJMo10AggHQ0GQAAAAA?e=C6HKb3)
 
-2. **Khởi động máy ảo**  
+2. **Start the Virtual Machine**  
 
-   Sử dụng VirtualBox hoặc VMware để chạy máy ảo.
-   Thiết kế máy thực hành pentest (Linux với các công cụ chuẩn bị sẵn) cùng mạng LAN với máy ảo Symfonos 3.
+   Use VirtualBox or VMware to run the VM.  
+   Set up your pentesting environment (Linux with pre-installed tools) on the same LAN network as the Symfonos 3 VM.  
 
-3. **Bắt đầu quá trình pentest**  
+3. **Begin the Pentest Process**  
 
-   Sử dụng các công cụ như nmap, gobuster, enum4linux, và các kỹ thuật khai thác phù hợp.
+   Use tools such as **nmap**, **gobuster**, **enum4linux**, and suitable exploitation techniques.  
 
-4. **Tham khảo chi tiết WRITEUP tại đây.**
+4. **Refer to the Detailed Write-up Here**  
 
-  [Write-up chi tiết tại đây](./WRITEUP.md)
+   [Detailed Write-up](./WRITEUP.md)  
 
-## Đóng góp
+## Contribution
 
-Nếu bạn có ý tưởng, góp ý hoặc phát hiện lỗi, hãy mở issue hoặc gửi pull request.
+If you have ideas, suggestions, or bug reports, please open an issue or submit a pull request.  
 
 ## License
 
-Dự án này tuân theo giấy phép MIT.
+This project is licensed under the MIT License.  
 
 ---
 
-Chúc bạn học tập hiệu quả và thành công trong quá trình
+Wishing you effective learning and success in your journey! 🚀
