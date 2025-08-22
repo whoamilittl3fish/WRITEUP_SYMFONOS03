@@ -24,7 +24,7 @@ Options:
   -   O: OS dection
   - -p-: scan all port (65535 ports)
     
-  ![SCAN PORT](image.png)
+  ![SCAN PORT](<img width="977" height="780" alt="image" src="https://github.com/user-attachments/assets/ff8e1139-0e27-4526-b583-30f742b76ef7" />)
 
 ## Section 2: Enumeration Results
 
