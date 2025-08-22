@@ -19,13 +19,12 @@ nmap -sS -A -O -p- <target-ip>
 With this, we can stealth scan SYN, collect information such as service + version, scan all port.
 Options:
   -  sS: half-open scan with SYN (SERVER) -> SYN-ACK (CLIENT) -> RST (SERVER)
-  -  -A: -sV, -O, --script=default, --traceroute
+  -   A: include 3 options such as -sV, -O, --script=default, --traceroute
   -  sV: output information of service, version
   -   O: OS dection
   - -p-: scan all port (65535 ports)
     
-<img width="977" height="780" alt="image" src="https://github.com/user-attachments/assets/e9cc88cf-161b-4864-8db6-756de097dfd3" />
-
+<img width="1296" height="738" alt="image" src="https://github.com/user-attachments/assets/88e56c05-520b-41da-a28b-d0aa6d9b5a20" />
 
 ## Section 2: Enumeration Results
 
