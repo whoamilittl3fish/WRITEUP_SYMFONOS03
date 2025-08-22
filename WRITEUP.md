@@ -14,9 +14,10 @@ This simulates the victim machine’s IP address in a real-world scenario.
 Use **nmap** to scan all ports and detect services:  
 
 ```bash
-nmap -p- -sC -sV <target-ip>
+nmap -sS -sV -A -O -p<target-ip>
 ```
-
+Options:
+  -sS: 
 
   ![SCAN PORT](image.png)
 
