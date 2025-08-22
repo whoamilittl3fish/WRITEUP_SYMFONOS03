@@ -60,6 +60,7 @@ Take a preview to `/gate/` with no useful information.
 
 The web server hosts an active **/cgi-bin/** directory.  
 Older servers running **bash** with CGI are often vulnerable to the well-known **Shellshock** exploit.  
+- Shellshock information: [Shellshock attack](https://www.exploit-db.com/docs/english/48112-the-shellshock-attack-%5Bpaper%5D.pdf?ref=benheater.com)
 
 - Exploit reference: [Exploit-DB 34895](https://www.exploit-db.com/exploits/34895)  
 
@@ -72,8 +73,7 @@ gobuster dir -u http://192.168.189.139/cgi-bin/ -w /usr/share/wordlists/dirbuste
 <img width="1384" height="511" alt="image" src="https://github.com/user-attachments/assets/4958844b-2bed-4f12-b832-4b4034ee62fa" />
 
 The scan revealed the endpoint:
-`/cgi-bin/underworld`
-When accessed in the browser, it displays information such as system time and logged-in users:
+`/cgi-bin/underworld`. When accessed in the browser, it displays information such as system time and logged-in users:
 
 <img width="1281" height="241" alt="image" src="https://github.com/user-attachments/assets/a903e9ba-7239-460b-8773-7153e467a67b" />
 
