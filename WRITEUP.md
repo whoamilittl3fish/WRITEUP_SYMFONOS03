@@ -54,6 +54,9 @@ Using tools such as **Nikto**, **Gobuster**, and **Dirb**, we discovered the fol
 
 Next steps will involve analyzing the content of `/gate/` and exploring possible vulnerabilities in `/cgi-bin/`.  
 
+Take a preview to `/gate/` with no useful information.
+<img width="1277" height="995" alt="image" src="https://github.com/user-attachments/assets/40163c87-613e-4bbf-aa6c-b06ed9b37536" />
+
 ### CGI-BIN Enumeration
 
 The web server hosts an active **/cgi-bin/** directory.  
