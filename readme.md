@@ -26,7 +26,7 @@ Symfonos 3 is a penetration testing lab that belongs to the Symfonos series. It 
 
 4. **Refer to the Detailed Write-up Here**  
 
-   [Detailed Write-up](./WRITEUP.md)  
+   [WRITE-UP](./WRITEUP.md)  
 
 ## Contribution
 
