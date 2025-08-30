@@ -2,6 +2,9 @@
 
 Symfonos 3 is a penetration testing lab that belongs to the Symfonos series. It is designed to help learners practice penetration testing skills on a Linux server environment. This lab simulates real-world scenarios, allowing you to strengthen your abilities in information gathering, vulnerability exploitation, privilege escalation, and gaining full system control.  
 
+## WRITE-UP POST
+ [WRITE-UP](https://github.com/whoamilittl3fish/WRITEUP_SYMFONOS03/blob/main/WRITEUP_Symfonos_03.md)
+
 ## Objectives
 
 - Understand and practice the steps of a penetration test.  
@@ -23,10 +26,6 @@ Symfonos 3 is a penetration testing lab that belongs to the Symfonos series. It 
 3. **Begin the Pentest Process**  
 
    Use tools such as **nmap**, **gobuster**, **enum4linux**, and suitable exploitation techniques.  
-
-4. **Refer to the Detailed Write-up Here**  
-
-   [WRITE-UP](https://github.com/whoamilittl3fish/WRITEUP_SYMFONOS03/blob/main/WRITEUP_Symfonos_03.md))  
 
 ## Contribution
 
